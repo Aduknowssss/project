@@ -14,9 +14,10 @@ class NewUser extends Component
 
     public function submit()
     {
+        
         // Validate the input data
         $this->validate([
-            'name' => 'required|string|max:255',
+            'name' => 'required|string|max:50',
             'email' => 'required|email|unique:users,email',
             'password' => 'required|string|min:8',
         ]);
